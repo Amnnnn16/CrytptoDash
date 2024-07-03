@@ -1,12 +1,15 @@
-import { Box, Button, Container, Flex, HStack, Heading, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, HStack, Heading, Icon, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import React from "react";
-import { FaChevronDown } from "react-icons/fa6";
-const Topnav = () => {
+import { FaBars, FaChevronDown } from "react-icons/fa6";
+const Topnav = ({title,onOpen}) => {
   return (
-    <Box boxShadow="xl">
-    <HStack maxW="80rem" justify="space-between" px="32" mx="auto"  h="16">
+    <Box boxShadow="xl"  px="4">
+    <HStack maxW="70rem" justify="space-between" mx="auto"  h="16">
+    <Icon as={FaBars} onClick={onOpen} display={{
+      base:"block", lg:"none "
+    }}></Icon>
       
-        <Heading fontWeight="medium"  fontSize="28px" >Dashboard</Heading>
+        <Heading fontWeight="medium"  fontSize="28px" >{title}</Heading>
         <Menu>
           <MenuButton as={Button} rightIcon={<FaChevronDown />}>
            
