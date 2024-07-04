@@ -3,7 +3,7 @@ import React from "react";
 import { FaBars, FaChevronDown } from "react-icons/fa6";
 const Topnav = ({title,onOpen}) => {
   return (
-    <Box boxShadow="xl"  px="4">
+    <Box boxShadow="xl"  px="4" bg="white">
     <HStack maxW="70rem" justify="space-between" mx="auto"  h="16">
     <Icon as={FaBars} onClick={onOpen} display={{
       base:"block", lg:"none "
